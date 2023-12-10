@@ -4,11 +4,12 @@
 #include <QObject>
 #include <QRect>
 #include <QTimer>
+#include <QPixmap>
 
 class Player : public QObject {
     Q_OBJECT
 public:
-    Player(QObject *parent, int x, int y, int width, int height);
+    Player(QObject *parent, int x, int y);
 
     void moveLeft();
     void moveRight();
@@ -19,13 +20,17 @@ public:
     void stopUp();
     void stopDown();
 
+    void setRect(const QRect &newRect);
+
     QRect getRect() const;
+    QPixmap getPixmap() const;
 
 signals:
     void positionChanged();
 
 private:
     QRect rect;
+    QPixmap pixmap;
     int speed;
     QTimer *timer;
     bool movingLeft, movingRight, movingUp, movingDown;

@@ -21,10 +21,13 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
+    void showEvent(QShowEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
     Ui::GameWindow *ui;
     Player *player;
+    bool playerPositioned;
 };
 
 #endif // GAMEWINDOW_H
