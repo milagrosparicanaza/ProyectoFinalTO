@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     ecosystem.cpp \
     fish.cpp \
+    gameobject.cpp \
     main.cpp \
     gamewindow.cpp \
     player.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     ecosystem.h \
     fish.h \
+    gameobject.h \
     gamewindow.h \
     player.h \
     start.h \
