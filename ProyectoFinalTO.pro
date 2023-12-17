@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     gamewindow.cpp \
     player.cpp \
+    start.cpp \
     trash.cpp
 
 HEADERS += \
@@ -21,10 +22,12 @@ HEADERS += \
     fish.h \
     gamewindow.h \
     player.h \
+    start.h \
     trash.h
 
 FORMS += \
-    gamewindow.ui
+    gamewindow.ui \
+    start.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
